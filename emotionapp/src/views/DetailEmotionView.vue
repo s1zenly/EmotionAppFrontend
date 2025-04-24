@@ -34,9 +34,10 @@
   </template>
   
   <script setup>
-  import { useRoute } from 'vue-router'
+  import { useRouter, useRoute } from 'vue-router'
   import { ref, computed } from 'vue'
   
+  const router = useRouter()
   const route = useRoute()
   
   // Конфигурация эмоций и их кнопок
@@ -151,12 +152,11 @@ const handleConfirmClick = async () => {
     if (!response.ok) {
       throw new Error('Ошибка при сохранении данных')
     }
-
-    console.log('Данные успешно сохранены')
-    // Здесь можно добавить перенаправление или другой обработчик успеха
+    
+    router.push({name: 'Quote', params: { name: emotionName.value}})
   } catch (error) {
     console.error('Ошибка:', error)
-    alert('Произошла ошибка при сохранении данных')
+    alert('Ошибка роутинга')
   }
 }
 

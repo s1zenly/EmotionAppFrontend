@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import EmotionView from '@/views/EmotionView.vue'
 import DetailEmotionView from '@/views/DetailEmotionView.vue'
+import QuoteEmotionView from '@/views/QuoteEmotionView.vue'
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
         path: '/detail/:name',
         name: 'Detail',
         component: DetailEmotionView
+    },
+    {
+        path: '/quote/:name',
+        name: 'Quote',
+        component: QuoteEmotionView
     }
 ]
 
