@@ -49,8 +49,9 @@ export default {
   setup() {
     const router = useRouter()
     
-    const navigateToCard = (route) => {
-      router.push(route)
+    const navigateToCard = (emotion) => {
+    // Используем именованный маршрут с параметром
+        router.push({ name: 'Detail', params: { name: emotion } })
     }
     
     return { navigateToCard }
@@ -66,8 +67,8 @@ export default {
   flex-direction: column;
   align-items: center;
   
-  min-width: 100vh;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(180deg, #D6EAFF 40.16%, #91C6FF 134.52%);
   }
 
