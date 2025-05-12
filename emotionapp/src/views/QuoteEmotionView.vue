@@ -122,7 +122,7 @@ fetchQuote()
 .quote-text {
     margin-top: 5%;
     margin-bottom: 15%;
-    font-size: xx-large;
+    font-size: x-large;
 }
 .author {
     font-style: italic;
